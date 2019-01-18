@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuber-deployment
+  labels:
+    app: kuber
+    type: back-end
+spec:
+  template:
+    metadata:
+      name: kuber-pod
+      labels:
+        app: myapp
+        type: back-end
+    spec:
+      containers:
+        - name: kuber-container
+          image: kuber:0.0.1
+  replicas: 2
+  selector:
+    matchLabels:
+      type: back-end

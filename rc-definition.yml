@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: kuber-rc
+  labels:
+    app: kuber
+    type: backend
+spec:
+  template:
+    metadata:
+      name: kuber-pod
+      labels:
+        app: myapp
+        type: back-end
+    spec:
+      containers:
+        - name: kuber-container
+          image: kuber:0.0.1
+  replicas: 2
