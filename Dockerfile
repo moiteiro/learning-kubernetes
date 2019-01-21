@@ -1,4 +1,4 @@
-# CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o kuber .
+# CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o test-app .
 
 FROM scratch
 
@@ -6,4 +6,4 @@ COPY . /
 
 EXPOSE 8080
 
-CMD ["./kuber"]
+CMD ["./test-app"]
