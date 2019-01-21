@@ -10,12 +10,12 @@ spec:
     metadata:
       name: kuber-pod
       labels:
-        app: myapp
+        app: kuber
         type: back-end
     spec:
       containers:
         - name: kuber-container
-          image: kuber:0.0.1
+          image: kuber:0.0.3
   replicas: 2
   selector:
     matchLabels:
