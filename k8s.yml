@@ -32,8 +32,8 @@ spec:
     spec:
       containers:
         - name: test-app-container
-          image: kuber:0.0.2
-  replicas: 2
+          image: test-app-skaffold:latest
+  replicas: 1
   selector:
     matchLabels:
       type: back-end
